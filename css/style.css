@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    background-color: #2C2B3D;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+#header {
+    font-family: 'JetBrains Mono', monospace;
+    width: 1000px;
+    height: 30px;
+    margin: 76px auto 96px;
+    font-size: 14px;
+    line-height: 28px;
+
+
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 64px;
+}
+
+li {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fafafc;
+}
+
+h1 {
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    font-size: 36px;
+    line-height: 40px;
+
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Open Sans', sans-serif;
+    width: 1100px;
+    margin: auto;
+    gap: 150px;
+
+}
+
+main p {
+    width: 600px;
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 28px;
+    color: #C2C2C2;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* irá colocar o label e o input text como coluna, ou seja, um abaixo do outro*/
+}
+
+.input-wrapper label,
+.checkbox-wrapper label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+
+}
+
+
+.input-wrapper input,
+.input-wrapper select {
+    background: #fafafc;
+    border: 1px solid #ababb6;
+    border-radius: 8px;
+
+    height: 35px;
+    padding: 0 12px;
+
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+}
+
+
+
+button {
+    color: #fafafc;
+    height: 30px;
+    width: 300px;
+    background: #04d361;
+    border-radius: 8px; 
+    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+footer {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 157px auto 23px;
+    border-top: 1px solid #00BFA6;
+    width: 570px;
+    height: 55px;
+    align-items: flex-end;
+    text-align: center;
+    line-height: 28px;
+    font-size: 14px;
+    
+}
+
+#pc {
+    margin-right: 82px;
+}
+
+#cadeado {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+span {
+    color: #00BFA6;
+}
+
+#instagram {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* ADM */
+
+.card-group {
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 50%;
+}
