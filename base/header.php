@@ -18,7 +18,7 @@
         <nav>
             <img src="./assets/cadeado.svg" alt="Logo Rocketsect">
             <ul>
-                <a href="adm.php"><li>Início</li></a>
+                <a href="../adm.php" class="text-decoration-none"><li>Início</li></a>
                 <li>Contato</li>
             </ul>
         </nav>
