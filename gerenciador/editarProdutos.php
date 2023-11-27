@@ -29,6 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conexao->close();
 ?>
+<?php
+include '../base/header.php';
+?>
 
 <head>
     <link rel="stylesheet" href="../css/fk.css">
@@ -47,10 +50,10 @@ $conexao->close();
                 <div class="input-wrapper">
                     <label for="event-link">Preço</label>
                     <input type="number" name="preco_unitario" value="<?php echo $produto['preco_unitario']; ?>">
-                <div class="input-wrapper">
-                    <label for="event-link">Descrição</label>
-                    <textarea name="descricao"><?php echo $produto['descricao']; ?></textarea>
-                </div>
+                    <div class="input-wrapper">
+                        <label for="event-link">Descrição</label>
+                        <textarea name="descricao"><?php echo $produto['descricao']; ?></textarea>
+                    </div>
         </fieldset>
         <footer>
             <input class="button" type="submit" value="Salvar">
@@ -58,3 +61,6 @@ $conexao->close();
 </div>
 </form>
 
+<?php
+include "../base/footer.php";
+?>

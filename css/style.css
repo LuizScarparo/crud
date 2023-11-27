@@ -114,7 +114,7 @@ button {
 
 
 
-footer {
+.footer {
     font-family: 'JetBrains Mono', monospace;
     margin: 157px auto 23px;
     border-top: 1px solid #00BFA6;
@@ -127,26 +127,15 @@ footer {
     
 }
 
-#pc {
-    margin-right: 82px;
-}
-
-#cadeado {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    margin-bottom: 20px;
-    margin-left: 20px;
+#instagram {
+    text-decoration: none;
+    color: white;
 }
 
 span {
     color: #00BFA6;
 }
 
-#instagram {
-    text-decoration: none;
-    color: white;
-}
 
 
 /* ADM */

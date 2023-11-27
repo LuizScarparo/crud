@@ -16,7 +16,7 @@
 <body>
     <div id="header">
         <nav>
-            <img src="./assets/cadeado.svg" alt="Logo Rocketsect">
+            <img src="../assets/cadeado.svg" alt="">
             <ul>
                 <a href="../adm.php" class="text-decoration-none"><li>Início</li></a>
                 <li>Contato</li>

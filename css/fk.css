@@ -88,8 +88,8 @@ header p {
 form {
     margin-top: 38px;
     background: #fafafc;
-    border-radius: 8px 8px 0 0;
-    height: 900px;
+    border-radius: 8px;
+    min-height: 200px;
     padding: 30px;
 
     display: flex;
@@ -213,7 +213,7 @@ fieldset legend {
 
 footer {
     background: #fafafc;
-    height: 136px;
+    height: 70px;
     width: 700px;
 
     display: flex;
@@ -239,4 +239,26 @@ footer .button:hover {
 
 input:invalid {
     border: 1px solid red;
+}
+
+.footer {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 157px auto 23px;
+    border-top: 1px solid #00BFA6;
+    width: 570px;
+    height: 55px;
+    align-items: flex-end;
+    text-align: center;
+    line-height: 28px;
+    font-size: 14px;
+    
+}
+
+#instagram {
+    text-decoration: none;
+    color: white;
+}
+
+.footer p {
+    color: white;
 }

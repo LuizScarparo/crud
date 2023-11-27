@@ -37,6 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conexao->close();
 ?>
 
+<?php
+include '../base/header.php';
+?>
 
 <head>
     <link rel="stylesheet" href="../css/fk.css">
@@ -61,6 +64,10 @@ $conexao->close();
                     <input type="email" name="email" value="<?php echo $email; ?>">
                 </div>
                 <div class="input-wrapper">
+                    <label for="event-link">Telefone</label>
+                    <input type="number" name="telefone" value="<?php echo $telefone; ?>">
+                </div>
+                <div class="input-wrapper">
                     <label for="event-link">Comissão</label>
                     <input type="number" name="comissao" value="<?php echo $comissao; ?>">
                 </div>
@@ -70,6 +77,6 @@ $conexao->close();
         </footer>
 </div>
 </form>
-
-
-
+<?php
+include "../base/footer.php";
+?>

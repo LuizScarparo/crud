@@ -53,3 +53,7 @@ include '../base/header.php';
 </div>
 </form>
 
+<?php
+include "../base/footer.php";
+?>
+
