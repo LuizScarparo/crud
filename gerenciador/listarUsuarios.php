@@ -70,20 +70,10 @@ $result = $conexao->query($sqlUsuarioInformacao);
                 ?>
             </tbody>
         </table>
+        
         <?php
         $conexao->close();
         ?>
-
-
-        <table border="1">
-            <thead>
-                <tr>
-
-                </tr>
-            </thead>
-            <tbody>
-
-        </table>
 
 
     </div>
@@ -91,12 +81,14 @@ $result = $conexao->query($sqlUsuarioInformacao);
         <input id="valor_busca" class="button" type="submit" value="Adicionar usuários" onclick="redireciona()">
     </footer>
 </div>
+
 <script>
     function redireciona() {
         var valor_busca = document.getElementById("valor_busca").value;
-        location.href = "adicionarUsuarios.php/";
+        location.href = "adicionarUsuarios.php";
     }
 </script>
+
 </body>
 
 

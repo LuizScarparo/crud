@@ -37,14 +37,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conexao->close();
 ?>
 
-<form method="post" action="editarUsuarios.php">
-    <input type="hidden" name="id" value="<?php echo $id; ?>">
-    Nome do usuário: <input type="text" name="nome" value="<?php echo $nome; ?>"><br>
-    Telefone do usuário: <input type="number" name="telefone" value="<?php echo $telefone; ?>"><br>
-    Endereço do usuário: <input type="text" name="endereco" value="<?php echo $endereco; ?>"><br>
-    Email do usuário: <input type="email" name="email" value="<?php echo $email; ?>"><br>
-    Comissão: <input type="number" name="comissao" value="<?php echo $comissao; ?>"><br>
-    <input type="submit" value="Salvar">
+
+<head>
+    <link rel="stylesheet" href="../css/fk.css">
+</head>
+
+<div id="page">
+    <form method="post" action="editarUsuarios.php">
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
+        <fieldset>
+            <div class="fieldset-wrapper">
+                <legend>Adicionar usuários</legend>
+                <div class="input-wrapper">
+                    <label for="event-tittle">Nome de usuário</label>
+                    <input type="text" name="nome" value="<?php echo $nome; ?>">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-link">Endereço</label>
+                    <input type="text" name="endereco" value="<?php echo $endereco; ?>">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-link">Email</label>
+                    <input type="email" name="email" value="<?php echo $email; ?>">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-link">Comissão</label>
+                    <input type="number" name="comissao" value="<?php echo $comissao; ?>">
+                </div>
+        </fieldset>
+        <footer>
+            <input class="button" type="submit" value="Salvar">
+        </footer>
+</div>
 </form>
+
 
 

@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sqlTipoUsuario = "UPDATE tipo_usuario 
         SET tipo_de_usuario='$tipoUsuario'
         WHERE id=$id";
-    if ($conexao->query($sqlTipoUsuario) === TRUE) {    
+    if ($conexao->query($sqlTipoUsuario) === TRUE) {
         header("Location: listarUsuarios.php");
     } else {
         echo "Erro ao atualizar: " . $conexao->error;
@@ -28,8 +28,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conexao->close();
 ?>
 
-<form method="post" action="editarTipoUsuario.php">
-    <input type="hidden" name="id" value="<?php echo $tipoUsuario['id']; ?>">
-    Tipo de usuário: <input type="number" name="tipo_de_usuario" value="<?php echo $tipoUsuario['tipo_de_usuario']; ?>"><br>
-    <input type="submit" value="Salvar">
+<?php
+include '../base/header.php';
+?>
+
+
+<head>
+    <link rel="stylesheet" href="../css/fk.css">
+</head>
+
+<div id="page">
+    <form method="post" action="editarTipoUsuario.php">
+        <input type="hidden" name="id" value="<?php echo $tipoUsuario['id']; ?>">
+        <fieldset>
+            <div class="fieldset-wrapper">
+                <legend>Editar tipo de usuário</legend>
+                <div class="input-wrapper">
+                    <label for="event-tittle">Tipo de usuário</label>
+                    <input type="number" name="tipo_de_usuario" value="<?php echo $tipoUsuario['tipo_de_usuario']; ?>">
+        </fieldset>
+        <footer>
+            <input class="button" type="submit" value="Salvar">
+        </footer>
+</div>
 </form>
+

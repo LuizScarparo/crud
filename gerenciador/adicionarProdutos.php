@@ -1,11 +1,6 @@
-<form method="post" action="">
-    Nome: <input type="text" name="nome_produto"><br>
-    Categoria: <input type="text" name="nome_categoria"><br>
-    Preço: <input type="number" name="preco_unitario"><br>
-    Quantidade: <input type="number" name="quantidade"><br>
-    Descrição: <textarea name="descricao"></textarea><br>
-    <input type="submit" value="Adicionar">
-</form>
+<?php
+include '../base/header.php';
+?>
 
 <?php
 include '../conexao.php';
@@ -19,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $insertCategorias = "INSERT INTO categorias (nome_categoria) VALUES ('$categoria')";
 
-    
+
     if ($conexao->query($insertCategorias) === TRUE) {
         $id_categoria = $conexao->insert_id;
 
@@ -42,3 +37,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conexao->close();
 ?>
+
+<head>
+    <link rel="stylesheet" href="../css/fk.css">
+</head>
+
+<div id="page">
+    <form method="post" action="adicionarProdutos.php">
+        <fieldset>
+            <div class="fieldset-wrapper">
+                <legend>Adicionar produtos</legend>
+                <div class="input-wrapper">
+                    <label for="event-tittle">Nome</label>
+                    <input type="text" name="nome_produto">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-link">Preço</label>
+                    <input type="number" name="preco_unitario">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-whatsapp">Categoria</label>
+                    <input type="text" name="nome_categoria">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-link">Quantidade</label>
+                    <input type="number" name="quantidade">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-link">Descrição</label>
+                    <textarea name="descricao"></textarea>
+                </div>
+        </fieldset>
+        <footer>
+            <input class="button" type="submit" value="Adicionar">
+        </footer>
+</div>
+</form>
+
+</html>

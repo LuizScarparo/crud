@@ -28,8 +28,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conexao->close();
 ?>
 
-<form method="post" action="editarCategorias.php">
-    <input type="hidden" name="id" value="<?php echo $categoria['id']; ?>">
-    Categoria: <input type="text" name="categorias" value="<?php echo $categoria['nome_categoria']; ?>"><br>
-    <input type="submit" value="Salvar">
+<?php
+include '../base/header.php';
+?>
+
+
+<head>
+    <link rel="stylesheet" href="../css/fk.css">
+</head>
+
+<div id="page">
+    <form method="post" action="editarQuantidade.php">
+        <input type="hidden" name="id" value="<?php echo $quantidade['id']; ?>">
+        <fieldset>
+            <div class="fieldset-wrapper">
+                <legend>Editar categoria</legend>
+                <div class="input-wrapper">
+                    <label for="event-tittle">Categoria</label>
+                    <input type="text" name="categorias" value="<?php echo $categoria['nome_categoria']; ?>">
+        </fieldset>
+        <footer>
+            <input class="button" type="submit" value="Salvar">
+        </footer>
+</div>
 </form>
+

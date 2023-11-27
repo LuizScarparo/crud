@@ -30,10 +30,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conexao->close();
 ?>
 
-<form method="post" action="editarProdutos.php">
-    <input type="hidden" name="id" value="<?php echo $produto['id']; ?>">
-    Nome do produto: <input type="text" name="nome_produto" value="<?php echo $produto['nome_produto']; ?>"><br>
-    Preço: <input type="number" name="preco_unitario" value="<?php echo $produto['preco_unitario']; ?>"><br>
-    Descrição: <textarea name="descricao"><?php echo $produto['descricao']; ?></textarea><br>
-    <input type="submit" value="Salvar">
+<head>
+    <link rel="stylesheet" href="../css/fk.css">
+</head>
+
+<div id="page">
+    <form method="post" action="editarProdutos.php">
+        <input type="hidden" name="id" value="<?php echo $produto['id']; ?>">
+        <fieldset>
+            <div class="fieldset-wrapper">
+                <legend>Adicionar produtos</legend>
+                <div class="input-wrapper">
+                    <label for="event-tittle">Nome</label>
+                    <input type="text" name="nome_produto" value="<?php echo $produto['nome_produto']; ?>">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-link">Preço</label>
+                    <input type="number" name="preco_unitario" value="<?php echo $produto['preco_unitario']; ?>">
+                <div class="input-wrapper">
+                    <label for="event-link">Descrição</label>
+                    <textarea name="descricao"><?php echo $produto['descricao']; ?></textarea>
+                </div>
+        </fieldset>
+        <footer>
+            <input class="button" type="submit" value="Salvar">
+        </footer>
+</div>
 </form>
+

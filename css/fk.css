@@ -14,7 +14,7 @@ textarea {
 }
 
 body {
-    background: #e5e5e5;
+    background: #2c2b3d;
 }
 
 body::before {
@@ -27,6 +27,37 @@ body::before {
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+#header {
+    font-family: 'JetBrains Mono', monospace;
+    width: 1000px;
+    height: 30px;
+    margin: 76px auto 96px;
+    font-size: 14px;
+    line-height: 28px;
+
+
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 64px;
+}
+
+li {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fafafc;
 }
 
 #page {
@@ -58,8 +89,8 @@ form {
     margin-top: 38px;
     background: #fafafc;
     border-radius: 8px 8px 0 0;
-    min-height: 300px;
-    padding: 64px;
+    height: 900px;
+    padding: 30px;
 
     display: flex;
     flex-direction: column;
@@ -181,24 +212,20 @@ fieldset legend {
 }
 
 footer {
-    background: #f0f0f4;
+    background: #fafafc;
     height: 136px;
+    width: 700px;
 
     display: flex;
     flex-direction: column;
+    padding-right: 30px;
 
-    padding: 40px 64px;
-
-    margin-bottom: 100px;
-
-    border-top: 1px solid #d6d6d6;
-    border-radius: 0 0 8px 8px;
 }
 
 footer .button {
     height: 56px;
     background: #04d361;
-    border-radius: 8px;
+    border-radius: 8px; 
     font-family: 'Archivo';
     font-style: normal;
     color: #fff;
