@@ -28,6 +28,7 @@ nav {
 
 }
 
+
 ul {
     display: flex;
     list-style: none;
@@ -50,13 +51,27 @@ h1 {
 
 }
 
+h2 {
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+
+}
+
+#pc {
+    margin-top: 45px;
+}
+
 main {
     display: flex;
     flex-direction: row;
     font-family: 'Open Sans', sans-serif;
     width: 1100px;
     margin: auto;
-    gap: 150px;
+    gap: 250px;
 
 }
 

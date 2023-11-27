@@ -13,11 +13,12 @@
 
 <body>
     <div id="header">
+        <h1>Sistema de gestão de produtos e usuários</h1>
     </div>
     <main>
         <img id="pc" src="./assets/img1.png" alt="Computador indicando segurança">
         <div id="text">
-            <h1>Faça <span>login</span></h1>
+            <h2>Faça <span>login</span></h2>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                 <div class="fieldset-wrapper">
 
@@ -65,10 +66,9 @@
             ?>
         </div>
     </main>
-    <footer>
+    <div class="footer">
         <p>Desenvolvido por <a id="instagram" href="wwww.instagram.com/luizgscarparo"> @luizgscarparo</a></p>
-    </footer>
-
+    </div>
 </body>
 
 </html>

@@ -11,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         echo "Erro ao deletar: " . $conexao->error;
     }
     
-    $sql = "DELETE FROM tipo_usuario WHERE id=$id";
-    if ($conexao->query($sql) === TRUE) {
+    $sqlTipoUsuario = "DELETE FROM tipo_usuario WHERE id=$id";
+    if ($conexao->query($sqlTipoUsuarios) === TRUE) {
         header("Location: listarTipoUsuario.php");
     } else {
         echo "Erro ao deletar: " . $conexao->error;
