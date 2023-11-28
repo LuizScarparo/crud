@@ -116,10 +116,35 @@ header p {
 }
 
 td a {
-    text-decoration: none;
-    color: rgb(255, 86, 86);
-    font-weight: bold;
+      appearance: none;
+      background-color: #4caf50;
+      border: 1px solid rgba(27, 31, 35, .15);
+      border-radius: 6px;
+      box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      padding: 6px 16px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: middle;
+      white-space: nowrap;
 }
+
+td a:hover {
+    background: #3d8e40;
+    cursor: pointer;
+}
+    
 
 footer {
     background: #f0f0f4;
@@ -138,16 +163,16 @@ footer {
 
 footer .button {
     height: 56px;
-    background: #04d361;
+    background: #4caf50;
     border-radius: 8px;
-    font-family: 'Archivo';
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
     font-style: normal;
     color: #fff;
     border: 0;
 }
 
 footer .button:hover {
-    background: #0bb155;
+    background: rgb(21, 142, 75);
     cursor: pointer;
 }
 
@@ -198,6 +223,7 @@ input:invalid {
     border-radius: 4px;
     background-color: #333; 
     transition: background-color 0.3s, color 0.3s;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 }
 
 .pagination a:hover {

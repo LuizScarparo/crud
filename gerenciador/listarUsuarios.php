@@ -49,7 +49,7 @@ $result = $conexao->query($sqlUsuarioInformacao);
                         <th scope="col">Comissão</th>
                         <th scope="col">Criado em</th>
                         <th scope="col">Atualizado em</th>
-                        <th scope="col">Editar info</th>
+                        <th scope="col">Editar informações</th>
                         <th scope="col">Deletar linha</th>
                     </tr>
                 </thead>
@@ -67,7 +67,7 @@ $result = $conexao->query($sqlUsuarioInformacao);
                             echo "<td>" . $row["comissao"] . "</td>";
                             echo "<td>" . $row["criado_em"] . "</td>";
                             echo "<td>" . $row["atualizado_em"] . "</td>";
-                            echo "<td><a href='editarUsuarios.php?id=" . $row["id"] . "'>Info</a> | <a href='editarTipoUsuario.php?id=" . $row["id"] . "'>Usuário</a>";
+                            echo "<td><a href='editarUsuarios.php?id=" . $row["id"] . "'>Dados</a>  <a href='editarTipoUsuario.php?id=" . $row["id"] . "'>Usuário</a>";
                             echo "<td><a href='deletarUsuarios.php?id=" . $row["id"] . "'>Deletar</a></td>";
                             echo "</tr>";
                         }
@@ -78,7 +78,7 @@ $result = $conexao->query($sqlUsuarioInformacao);
                 </tbody>
                 <div class="pagination">
                     <?php
-                    $total = "SELECT COUNT(id) AS total FROM produtos";
+                    $total = "SELECT COUNT(id) AS total FROM usuarios";
                     $result = $conexao->query($total);
                     $row = $result->fetch_assoc();
                     $paginas = ceil($row['total'] / $limite);
