@@ -3,7 +3,6 @@
     <input type="submit" value="Adicionar">
 </form>
 
-
 <?php
     include '../conexao.php';
 
@@ -25,5 +24,6 @@
 
     $conexao->close();
 ?>
+
 
 

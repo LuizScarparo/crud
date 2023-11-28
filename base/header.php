@@ -16,10 +16,11 @@
 <body>
     <div id="header">
         <nav>
-            <a href="../adm.php"><img src="../assets/cadeado.svg" alt=""></a>
+            <a href="../adm.php"><img src="../assets/seta1.png" id="seta"></a>
             <ul>
                 <a href="../adm.php" class="text-decoration-none"><li>Início</li></a>
                 <li>Contato</li>
+                <a href="../logout.php" class="text-decoration-none"><li>Sair</li></a>
             </ul>
         </nav>
     </div>

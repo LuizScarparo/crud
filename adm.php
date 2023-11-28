@@ -1,3 +1,8 @@
+<?php
+include('./conexao.php');
+include('./protect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,10 +23,9 @@
         <nav>
             <img src="./assets/cadeado.svg" alt="">
             <ul>
-                <a href="./adm.php" class="text-decoration-none">
-                <li>Início</li>
-                </a>
+                <a href="./adm.php" class="text-decoration-none"><li>Início</li></a>
                 <li>Contato</li>
+                <a href="./logout.php" class="text-decoration-none"><li>Sair</li></a>
             </ul>
         </nav>
     </div>

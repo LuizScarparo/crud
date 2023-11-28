@@ -19,17 +19,17 @@
         <img id="pc" src="./assets/img1.png" alt="Computador indicando segurança">
         <div id="text">
             <h2>Faça <span>login</span></h2>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <form action="" method="post">
                 <div class="fieldset-wrapper">
 
                     <div class="input-wrapper">
                         <label for="username">Usuário</label><br>
-                        <input type="text" id="username" name="user" required><br>
+                        <input type="text" id="username" name="usuario" required><br>
                     </div>
 
                     <div class="input-wrapper">
                         <label for="password">Senha de acesso</label><br>
-                        <input type="password" id="password" name="pass" required><br>
+                        <input type="password" id="password" name="senha" required><br>
                     </div>
                     <div class="button-wrapper">
                         <button>
@@ -39,28 +39,38 @@
                 </div>
             </form>
             <?php
-            session_start();
             include "./conexao.php";
 
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $user = $_POST["user"];
-                $pass = $_POST["pass"];
+            if (isset($_POST['usuario']) || isset($_POST['senha'])) {
 
-                $sql = "SELECT * FROM users WHERE user = '$user'";
-                $result = $conexao->query($sql);
-
-                if ($result->num_rows > 0) {
-                    $row = $result->fetch_assoc();
-                    if (password_verify($pass, $row["pass"])) {
-                        $_SESSION["user_id"] = $row["id"];
-                        header("Location: adm.php");
-                        exit();
-                    } else {
-                        echo "Senha inválida. Por favor, tente novamente.";
-                        var_dump($user, $pass);
-                    }
+                if (strlen($_POST['usuario']) == 0) {
+                    echo "Preencha seu usuario";
+                } else if (strlen($_POST['senha']) == 0) {
+                    echo "Preencha sua senha";
                 } else {
-                    echo "Nome de usuário não encontrado. Por favor, tente novamente.";
+
+                    $usuario = $conexao->real_escape_string($_POST['usuario']);
+                    $senha = $conexao->real_escape_string($_POST['senha']);
+
+                    $sql_code = "SELECT * FROM users WHERE usuario = '$usuario' AND senha = '$senha'";
+                    $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
+
+                    $quantidade = $sql_query->num_rows;
+
+                    if ($quantidade == 1) {
+
+                        $usuarioFinal = $sql_query->fetch_assoc();
+
+                        if (!isset($_SESSION)) {
+                            session_start();
+                        }
+
+                        $_SESSION['id'] = $usuarioFinal['id'];
+
+                        header("Location: adm.php");
+                    } else {
+                        echo "Falha ao logar! Usuario ou senha incorretos";
+                    }
                 }
             }
             ?>

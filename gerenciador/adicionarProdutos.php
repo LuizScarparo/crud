@@ -1,9 +1,9 @@
 <?php
+include '../conexao.php';
 include '../base/header.php';
 ?>
 
 <?php
-include '../conexao.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['nome_produto'];

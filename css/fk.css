@@ -262,3 +262,7 @@ input:invalid {
 .footer p {
     color: white;
 }
+
+#seta {
+    width: 50px;
+}
