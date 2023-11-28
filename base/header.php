@@ -16,7 +16,7 @@
 <body>
     <div id="header">
         <nav>
-            <img src="../assets/cadeado.svg" alt="">
+            <a href="../adm.php"><img src="../assets/cadeado.svg" alt=""></a>
             <ul>
                 <a href="../adm.php" class="text-decoration-none"><li>Início</li></a>
                 <li>Contato</li>

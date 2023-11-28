@@ -32,20 +32,20 @@ $conexao->close();
 include '../base/header.php';
 ?>
 
-
 <head>
     <link rel="stylesheet" href="../css/fk.css">
 </head>
 
 <div id="page">
-    <form method="post" action="editarQuantidade.php">
-        <input type="hidden" name="id" value="<?php echo $quantidade['id']; ?>">
+    <form method="post" action="editarCategorias.php">
+        <input type="hidden" name="id" value="<?php echo $categoria['id']; ?>">
         <fieldset>
             <div class="fieldset-wrapper">
-                <legend>Editar categoria</legend>
+                <legend>Adicionar produtos</legend>
                 <div class="input-wrapper">
                     <label for="event-tittle">Categoria</label>
                     <input type="text" name="categorias" value="<?php echo $categoria['nome_categoria']; ?>">
+                </div>
         </fieldset>
         <footer>
             <input class="button" type="submit" value="Salvar">
@@ -56,4 +56,3 @@ include '../base/header.php';
 <?php
 include "../base/footer.php";
 ?>
-
