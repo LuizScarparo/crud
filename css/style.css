@@ -167,3 +167,18 @@ span {
     text-decoration: none;
     color: #000000;
 }
+
+h5.card-title,
+p.card-text {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+h5.card-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+p.card-text {
+    justify-content: end;
+}

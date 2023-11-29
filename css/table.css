@@ -69,6 +69,11 @@ body::before {
     margin: auto;
 }
 
+h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+}
+
 header {
     width: 319px;
     margin-top: 80px;
@@ -89,6 +94,12 @@ header p {
     color: #42d3ff;
 }
 
+
+th, td {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+}
+
 .table-wrapper {
     margin-top: 38px;
     background: #fafafc;
@@ -104,15 +115,9 @@ header p {
 
 }
 
-.col-3 {
-    display: flex;
-    gap: 20px;
-}
-
-.col-3>div:nth-child(1) {
-    /* >(primeiro nivel da div) :nth(enesimo filho) dai o filho fica no parenteses, nesse caso serao as primeiras 3 divs desse forcefield*/
-    width: 100%;
-
+th {
+    font-weight: bold;
+    font-size: 16px;
 }
 
 td a {

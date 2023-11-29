@@ -41,14 +41,14 @@ $result = $conexao->query($sqlUsuarioInformacao);
                 <thead class="thead-dark">
                     <tr>
                         <th>ID</th>
-                        <th scope="col">Tipo do usuário</th>
-                        <th scope="col">Nome do usuário</th>
-                        <th scope="col">Endereço do usuário</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Endereço</th>
                         <th scope="col">Telefone</th>
                         <th scope="col">Email</th>
                         <th scope="col">Comissão</th>
-                        <th scope="col">Criado em</th>
-                        <th scope="col">Atualizado em</th>
+                        <th scope="col">Criado</th>
+                        <th scope="col">Atualizado</th>
                         <th scope="col">Editar informações</th>
                         <th scope="col">Deletar linha</th>
                     </tr>

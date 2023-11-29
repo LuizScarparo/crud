@@ -47,12 +47,12 @@ $result = $conexao->query($sql);
                         <th scope="col">Preço(R$)</th>
                         <th scope="col">Descrição</th>
                         <th scope="col">Quantidade</th>
-                        <th scope="col">Criado em</th>
-                        <th scope="col">Atualizado em</th>
-                        <th scope="col">Editar info</th>
-                        <th scope="col">Editar Estoque</th>
-                        <th scope="col">Editar Categoria</th>
-                        <th scope="col">Deletar linha</th>
+                        <th scope="col">Criado</th>
+                        <th scope="col">Atualizado</th>
+                        <th scope="col">Informações</th>
+                        <th scope="col">Estoque</th>
+                        <th scope="col">Categorias</th>
+                        <th scope="col">Deletar</th>
                     </tr>
                 </thead>
                 <tbody>
